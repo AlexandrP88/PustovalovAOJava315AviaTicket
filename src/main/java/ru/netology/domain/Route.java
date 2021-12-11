@@ -81,13 +81,6 @@ public class Route implements Comparable<Route> {
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Route route = (Route) o;
-        return id == route.id && price == route.price && travelTime == route.travelTime && Objects.equals(departureAirport, route.departureAirport) && Objects.equals(arrivalAirport, route.arrivalAirport);
-    }
 
     @Override
     public int hashCode() {
