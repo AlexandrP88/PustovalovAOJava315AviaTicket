@@ -18,16 +18,5 @@ public class RouteRepository {
         return route;
     }
 
-    public void removeById(int id) {
-        int length = route.length - 1;
-        Route[] tmp = new Route[length];
-        int index = 0;
-        for (Route ticket : route) {
-            if (ticket.getId() != id) {
-                tmp[index] = ticket;
-                index++;
-            }
-        }
-        route = tmp;
-    }
+
 }
