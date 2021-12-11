@@ -21,14 +21,15 @@ class RouteManagerTest {
     @Test
     public void showdAllTicket() {
         RouteRepository repo = new RouteRepository();
-        repo.save(ticket1);
-        repo.save(ticket2);
-        repo.save(ticket3);
-        repo.save(ticket4);
-        repo.save(ticket5);
-        repo.save(ticket6);
-        repo.save(ticket7);
 
+        RouteManager manager = new RouteManager(repo);
+        manager.add(ticket1);
+        manager.add(ticket2);
+        manager.add(ticket3);
+        manager.add(ticket4);
+        manager.add(ticket5);
+        manager.add(ticket6);
+        manager.add(ticket7);
 
         Route[] expected = {ticket7, ticket2, ticket1, ticket3, ticket5, ticket6, ticket4};
         Route[] actual = repo.findAll();
